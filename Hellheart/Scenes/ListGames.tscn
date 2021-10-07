@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Fonts/font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/ListGames.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Fonts/montserrat_eb_64.tres" type="DynamicFont" id=3]
+
+[node name="ListGames" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0666667, 0, 0.2, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 0.00184351
+anchor_right = 1.0
+anchor_bottom = 1.00184
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 560.0
+margin_bottom = 45.0
+custom_fonts/font = ExtResource( 1 )
+text = "Games"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+margin_top = 49.0
+margin_right = 560.0
+margin_bottom = 947.0
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+margin_right = 560.0
+size_flags_horizontal = 3
+custom_constants/separation = 20
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_top = 951.0
+margin_right = 560.0
+margin_bottom = 983.0
+custom_fonts/font = ExtResource( 3 )
+text = "Friends"
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]

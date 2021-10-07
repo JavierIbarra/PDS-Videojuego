@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Fonts/montserrat_eb_64.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/Prefabs/Friend.gd" type="Script" id=2]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+margin_left = 19.0
+margin_right = 580.0
+margin_bottom = 55.0
+custom_constants/separation = 20
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" type="Label" parent="."]
+margin_top = 14.0
+margin_right = 391.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 1 )
+text = "NAME "
+
+[node name="Button" type="Button" parent="."]
+margin_left = 411.0
+margin_right = 480.0
+margin_bottom = 55.0
+text = "Rechazar"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 500.0
+margin_right = 561.0
+margin_bottom = 55.0
+text = "Aceptar"
